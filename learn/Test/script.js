@@ -54,4 +54,12 @@ testFunction();
    
 console.log("main  program:");
 console.log(globalGreeting);
-console.log(localGreeting);  //  ->  Uncaught  ReferenceError:  localGreeting  is  not  defined
+// console.log(localGreeting);  //  ->  Uncaught  ReferenceError:  localGreeting  is  not  defined
+
+var  height  =  180;
+console.log(height);    //  ->  180
+console.log(weight);    //  ->  Uncaught  ReferenceError:  weight  is  not  defined
+
+var  height  =  180;
+console.log(height);    //  ->  180
+console.log(weight);    //  ->  Uncaught  ReferenceError:  weight  is  not  defined
