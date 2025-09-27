@@ -16,19 +16,6 @@
       #messages > li:nth-child(odd) { background: #efefef; }
     </style>
   </head>
-  <script src='socket.io/socket.io.js'></script>
-  <script>
-    const socket = io();
-    const form = document.getElementById('form');
-    const input = document.getElementById('input');
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      if (input.value){
-        socket.emit('chat message', input.value);
-        input.value = '';
-      }
-    });
-  </script>
   <body>
     <h1>Simple Title</h1>
     <ul id="messages"></ul>
@@ -36,4 +23,19 @@
       <input id="input" autocomplete="off" /><button>Send</button>
     </form>
   </body>
+  <script src='socket.io/socket.io.js'></script>
+  <script>
+    const socket = io();
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (input.value) {
+        console.log(input.value)
+        socket.emit('chat message', input.value);
+        input.value = '';
+      }
+    });
+  </script>
 </html>
