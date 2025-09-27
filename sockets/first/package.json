@@ -1,11 +1,12 @@
 {
-    "name": "sockets_chat_example",
+    "name": "first",
     "version": "0.0.1",
     "description": "my first socket.io app",
     "type": "module",
     "dependencies": {
         "express": "^4.21.2",
         "node": "^24.9.0",
-        "socket": "^1.1.23"
+        "socket": "^1.1.23",
+        "socket.io": "^4.8.1"
     }
 }
